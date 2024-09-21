@@ -12,7 +12,7 @@ const Header = () => {
       <div className='container mx-auto flex items-center justify-between'>
         {/* logo */}
         <Link to='/page.tsx' spy={true} smooth={true} className='cursor-pointer'>
-          <Image src='/logo.png' height={1000} width={1000} alt='logo' className='w-14 rounded-full' />
+          <Image src='/logo1.png' height={1000} width={1000} alt='logo' className='w-14 rounded-full' />
         </Link>
 
         {/* disktop nav */}

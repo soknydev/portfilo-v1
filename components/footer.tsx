@@ -14,7 +14,7 @@ const Footer = () => {
           <span>® 2024</span> Pov Sokny
         </p>
         <Link to='/' spy={true} smooth={true} className='cursor-pointer'>
-          <Image src='/logo.png' width={1000} height={1000} alt='logo' className='w-14 rounded-full' />
+          <Image src='/logo1.png' width={1000} height={1000} alt='logo' className='w-14 rounded-full' />
         </Link>
         <Social />
       </div>
