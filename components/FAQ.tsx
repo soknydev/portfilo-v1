@@ -24,65 +24,138 @@ const slideVariant = {
 
 export const tech = [
   {
-    src: '/tech/express.svg',
-    width: 101.2,
-    height: 29.99,
-    alt: 'express'
+    src: '/tech/c.png',
+    width: 220,
+    height: 180,
+    alt: 'C Programming'
   },
   {
-    src: '/tech/node.svg',
-    width: 106.2,
-    height: 31,
-    alt: 'node js'
+    src: '/tech/cpp.png',
+    width: 220,
+    height: 180,
+    alt: 'C++ Programming'
   },
   {
-    src: '/tech/ts.svg',
-    width: 46.14,
-    height: 45.24,
-    alt: 'typescript'
+    src: '/tech/ccharp.png',
+    width: 220,
+    height: 150,
+    alt: 'C# Programming'
   },
   {
-    src: '/tech/expo.svg',
-    width: 89.96,
-    height: 32.49,
-    alt: 'expo'
+    src: '/tech/html.png',
+    width: 200,
+    height: 100,
+    alt: 'HTML'
   },
   {
-    src: '/tech/gql.svg',
-    width: 47.48,
-    height: 52.48,
-    alt: 'gql'
+    src: '/tech/css.png',
+    width: 220,
+    height: 150,
+    alt: 'CSS'
   },
   {
-    src: '/tech/apollo.svg',
-    width: 47.48,
-    height: 52.48,
-    alt: 'apollo'
+    src: '/tech/javascript.png',
+    width: 200,
+    height: 150,
+    alt: 'JavaScript'
   },
   {
-    src: '/tech/react.svg',
-    width: 54.98,
-    height: 48.73,
-    alt: 'react'
+    src: '/tech/typescript.png',
+    width: 200,
+    height: 150,
+    alt: 'TypeScript'
   },
   {
-    src: '/tech/angular.svg',
-    width: 47.48,
-    height: 51.23,
-    alt: 'angular'
+    src: '/tech/bootstrap.png',
+    width: 200,
+    height: 150,
+    alt: 'Bootstrap'
   },
   {
-    src: '/tech/psql.svg',
-    width: 128.94,
-    height: 19.99,
-    alt: 'psql'
+    src: '/tech/tailwind.png',
+    width: 1200,
+    height: 100,
+    alt: 'Tailwind CSS'
   },
   {
-    src: '/tech/prisma.svg',
-    width: 43.73,
-    height: 51.23,
-    alt: 'prisma'
-  }
+    src: '/tech/redux.png',
+    width: 200,
+    height: 150,
+    alt: 'Redux'
+  },
+  {
+    src: '/tech/reactjs.png',
+    width: 200,
+    height: 150,
+    alt: 'React JS'
+  },
+  {
+    src: '/tech/nextjs1.png',
+    width: 1200,
+    height: 150,
+    alt: 'Next JS'
+  },
+  {
+    src: '/tech/java.png',
+    width: 250,
+    height: 150,
+    alt: 'Java Programming'
+  },
+  {
+    src: '/tech/spring.png',
+    width: 200,
+    height: 100,
+    alt: 'Spring Framework'
+  },
+  {
+    src: '/tech/spring-boot1.png',
+    width: 200,
+    height: 100,
+    alt: 'Spring Boot'
+  },
+  {
+    src: '/tech/postgresql.png',
+    width: 1000,
+    height: 100,
+    alt: 'PostgreSQL'
+  },
+  {
+    src: '/tech/mysql.png',
+    width: 1000,
+    height: 100,
+    alt: 'MySQL'
+  },
+  {
+    src: '/tech/github.png',
+    width: 200,
+    height: 100,
+    alt: 'Github'
+  },
+  {
+    src: '/tech/docker.png',
+    width: 200,
+    height: 100,
+    alt: 'Docker'
+  },
+  {
+    src: '/tech/docker-compose1.png',
+    width: 300,
+    height: 1000,
+    alt: 'Docker Compose'
+  },
+  {
+    src: '/tech/jenkins.png',
+    width: 300,
+    height: 1000,
+    alt: 'Jenkins'
+  },
+  {
+    src: '/tech/linux.png',
+    width: 300,
+    height: 1000,
+    alt: 'Linux'
+  },
+
 ]
 
 const FAQ = () => {
@@ -143,6 +216,7 @@ const FAQ = () => {
                 width={item.width}
                 height={item.height}
                 alt={item.alt}
+                className='w-24 h-24'
               />
             ))}
             {tech.map(item => (
@@ -152,6 +226,17 @@ const FAQ = () => {
                 width={item.width}
                 height={item.height}
                 alt={item.alt}
+                className='w-24 h-24'
+              />
+            ))}
+            {tech.map(item => (
+              <Image
+                key={item.alt}
+                src={item.src}
+                width={item.width}
+                height={item.height}
+                alt={item.alt}
+                className='w-24 h-24'
               />
             ))}
           </motion.div>
