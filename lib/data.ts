@@ -1,25 +1,25 @@
 export const projectsData = [
   {
     id: 1,
-    image: '/projects/01.png',
+    image: '/projects/a1.png',
     category: 'Front-end',
-    title: 'Figma to react/nextjs',
+    title: 'GradesBot',
     description:
       'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested'
   },
   {
     id: 2,
     image: '/projects/02.png',
-    category: 'Full-stack',
-    title: ' Github API',
+    category: 'Back end',
+    title: ' Kak Mobile Banking',
     description:
       'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested'
   },
   {
     id: 3,
-    image: '/projects/03.png',
-    category: 'Full-stack',
-    title: ' Graphql By example',
+    image: '/projects/a3.png',
+    category: 'Front end',
+    title: 'Snake Game',
     description:
       'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested'
   }
