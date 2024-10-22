@@ -7,7 +7,7 @@ import FadeIn from '@/lib/variants';
 
 const Contact = () => {
   // State to hold form data, loading status, error, and success messages
-  const [formData, setFormData] = useState({ name: '', subject: '', message: '' });
+  const [formData, setFormData] = useState({ email: '', name: '', subject: '', message: '' });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
@@ -37,7 +37,7 @@ const Contact = () => {
   
       if (res.ok) {
         setSuccess(result.message);
-        setFormData({ name: '', subject: '', message: '' });  // Reset form after successful submission
+        setFormData({ email: '', name: '', subject: '', message: '' });  // Reset form after successful submission
       } else {
         setError(result.message || 'An error occurred.');
         console.error('Server response error:', result);
@@ -49,7 +49,6 @@ const Contact = () => {
       setLoading(false);
     }
   };
-  
 
   return (
     <section id='Contact' className='bg-[url(/contact/contact-bg.png)] py-28'>
@@ -74,6 +73,17 @@ const Contact = () => {
           viewport={{ once: true, amount: 0.8 }}
           className='flex max-w-3xl flex-1 flex-col items-start gap-y-8 rounded-md bg-secondary/80 p-10'
         >
+          {/* Email Input */}
+          <input
+            name='email'
+            type='email'
+            placeholder='Your email'
+            required
+            value={formData.email}
+            onChange={handleChange}
+            className='w-full border-b border-white/25 bg-transparent py-3 outline-none transition-all placeholder:text-white/50 focus:border-blue/25'
+          />
+
           {/* Name Input */}
           <input
             name='name'
@@ -84,7 +94,7 @@ const Contact = () => {
             onChange={handleChange}
             className='w-full border-b border-white/25 bg-transparent py-3 outline-none transition-all placeholder:text-white/50 focus:border-blue/25'
           />
-          
+
           {/* Subject Input */}
           <input
             name='subject'
@@ -95,7 +105,7 @@ const Contact = () => {
             onChange={handleChange}
             className='w-full border-b border-white/25 bg-transparent py-3 outline-none transition-all placeholder:text-white/50 focus:border-blue/25'
           />
-          
+
           {/* Message Input */}
           <textarea
             name='message'
@@ -105,7 +115,7 @@ const Contact = () => {
             onChange={handleChange}
             className='mb-12 w-full resize-none border-b border-white/25 bg-transparent py-12 outline-none transition-all placeholder:text-white/50 focus:border-blue/25'
           ></textarea>
-          
+
           {/* Submit Button */}
           <button
             type='submit'

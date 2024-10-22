@@ -3,22 +3,22 @@ import nodemailer from 'nodemailer';
 
 export async function POST(req: Request) {
   const body = await req.json();
-  const { name, subject, message } = body;
+  const { email, name, subject, message } = body;
 
   // Create transporter
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: process.env.GMAIL_USER,
-      pass: process.env.GMAIL_PASS,
+      user: process.env.GMAIL_USER, // Your Gmail username remains static
+      pass: process.env.GMAIL_PASS, // Your Gmail app password from .env
     },
   });
 
   const mailOptions = {
-    from: process.env.GMAIL_USER,
-    to: 'soknyhacker@gmail.com',
+    from: email, // Use the user's input email as the 'from' field
+    to: process.env.GMAIL_USER, // The email will be sent to your static Gmail account
     subject: subject,
-    text: `Name: ${name}\nMessage: ${message}`,
+    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
   };
 
   try {
