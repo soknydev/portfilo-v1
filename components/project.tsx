@@ -32,9 +32,9 @@ export const Project = ({
       className='flex flex-col items-center rounded-3xl bg-blue/10 p-4 xl:flex-row xl:justify-between'
     >
       <div className='pb-[60px]'>
-        <h5 className='text-sm font-medium capitalize'>{category}</h5>
+        <h5 className='text-[18px] font-medium capitalize underline'>{category}</h5>
         <h3 className='mt-4 text-[40px] font-light'>{title}</h3>
-        <p className='mb-4 mt-4 max-w-xl'>{description}</p>
+        <p className='text-[18px] mb-4 mt-4 max-w-xl'>{description}</p>
       </div>
       <div className='flex rotate-45 items-center justify-center rounded-[30px] outline-[3px] outline-offset-8 outline-blue transition-all hover:outline'>
         <Link href='/'>

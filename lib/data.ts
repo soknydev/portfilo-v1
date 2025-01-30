@@ -5,7 +5,7 @@ export const projectsData = [
     category: 'Front-end',
     title: 'GradesBot',
     description:
-      'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested'
+    'GradesBot is an innovative educational platform created to streamline classroom management and enrich the teaching and learning experience by offering autograding.'
   },
   {
     id: 2,
