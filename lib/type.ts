@@ -4,5 +4,13 @@ export interface ServiceType {
     description: string
 }
 
+export interface ProjectType {
+    id: number;
+    image: string;
+    category: string;
+    title: string;
+    description: string;
+    link?: string;
+}
 
 
