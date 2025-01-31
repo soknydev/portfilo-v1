@@ -1,19 +1,33 @@
-export const projectsData = [
+export interface Project {
+  id: number;
+  image: string;
+  category: string;
+  title: string;
+  description: string;
+}
+
+export interface AskedQuestion {
+  id: number;
+  qs: string;
+  answer: string;
+}
+
+export const projectsData: Project[] = [
   {
     id: 1,
     image: '/projects/a1.png',
     category: 'Front-end',
     title: 'GradesBot',
     description:
-    'GradesBot is an innovative educational platform created to streamline classroom management and enrich the teaching and learning experience by offering autograding.'
+      'GradesBot is an innovative educational platform created to streamline classroom management and enrich the teaching and learning experience by offering autograding.',
   },
   {
     id: 2,
     image: '/projects/02.png',
     category: 'Back end',
-    title: ' Kak Mobile Banking',
+    title: 'Kak Mobile Banking',
     description:
-      'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested'
+      'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.',
   },
   {
     id: 3,
@@ -21,25 +35,25 @@ export const projectsData = [
     category: 'Front end',
     title: 'Snake Game',
     description:
-      'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested'
-  }
-]
+      'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.',
+  },
+];
 
-export const askedQuestions = [
+export const askedQuestions: AskedQuestion[] = [
   {
     id: 1,
-    qs: 'can you work on my project immediately?',
+    qs: 'Can you work on my project immediately?',
     answer:
-      'Yes, if i am not currently engaged in other commitments, otherwise i will get the jobe done in deadline'
+      'Yes, if I am not currently engaged in other commitments, otherwise I will get the job done within the deadline.',
   },
   {
     id: 2,
-    qs: 'are you working hourly base or by projects ?',
-    answer: 'both of them it&apos; depends on client choice'
+    qs: 'Are you working on an hourly basis or by project?',
+    answer: "Both, it depends on the client's choice.",
   },
   {
     id: 3,
-    qs: 'What are technologies you use in your stack?',
-    answer: 'i am using latest in cutting edge technology conerning MERN Stack'
-  }
-]
+    qs: 'What technologies do you use in your stack?',
+    answer: 'I use the latest cutting-edge technologies, primarily focusing on the MERN stack.',
+  },
+];

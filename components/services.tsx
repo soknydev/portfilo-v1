@@ -3,35 +3,14 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import FadeIn from '../lib/variants'
 import AnimatedCounter from '../lib/animatedCounter'
+import {servicesData} from '@/lib/serviceData'
+import { ServiceType } from '@/lib/type'
 
-interface Service {
-  id: number
-  title: string
-  description: string
-}
-
-const services: Service[] = [
-  {
-    id: 1,
-    title: 'Front-end Development',
-    description: 'Build Web Applications using modern web development technologies like HTML, CSS, JavaScript React JS, Next.js with TypeScript, Tailwind CSS and more.',
-  },
-  {
-    id: 2,
-    title: 'Back-end Development',
-    description: 'Build scalable and efficient back-end systems using Spring Framework, Spring Boot, Spring Microservies and Postgresql.',
-  },
-  {
-    id: 3,
-    title: 'DevOps Egineering',
-    description: 'Build CI/CD pipelines using Jenkins, Gitlab CI, Github Actions, Nginx, Docker, Kubernetes, Terraform, Ansible and more.',
-  },
-]
 
 const Services = () => {
-  const [cart, setCart] = useState<Service[]>([])
+  const [cart, setCart] = useState<ServiceType[]>([])
 
-  const addToCart = (service: Service) => {
+  const addToCart = (service: ServiceType) => {
     setCart((prevCart) => [...prevCart, service])
   }
 
@@ -72,7 +51,7 @@ const Services = () => {
             viewport={{ once: true, amount: 0.8 }}
             className="flex h-full flex-col gap-8"
           >
-            {services.map((service) => (
+            {servicesData.map((service) => (
               <div key={service.id} className="flex items-center space-x-6 bg-primary p-4">
                 <p className="text-6xl font-bold text-blue">{`0${service.id}`}</p>
                 <div>
